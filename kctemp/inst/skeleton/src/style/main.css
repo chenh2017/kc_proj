@@ -1,0 +1,275 @@
+@charset "utf-8";
+
+
+/*************** topheader **************************/
+
+.topheader {
+	width:100%;
+	margin-left: -15px;
+	border:0;
+	text-align: center;
+	font-family: "Times New Roman", "宋体",Arial, sans-serif;
+	font-size: 20px;
+	padding: 8px 50px;
+	position:fixed;
+	z-index: 20;
+	display: block;
+	height: 45px;
+	color: green;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.9);
+	font-weight:bold;
+	line-height: 33px;
+	vertical-align:middle;
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #ffffff 1%, #eaeaea 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #ffffff), color-stop(100%, #eaeaea));
+	background: -webkit-linear-gradient(top, #ffffff 1%, #eaeaea 100%);
+	background: -o-linear-gradient(top, #ffffff 1%, #eaeaea 100%);
+	background: -ms-linear-gradient(top, #ffffff 1%, #eaeaea 100%);
+	background: linear-gradient(top, #ffffff 1%, #eaeaea 100%);
+ 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea', GradientType=0 );
+	box-shadow: 0px 0px 0px 0px rgba(155,155,155,0.3),  0px 0px 0px 0px rgba(255,255,255,0.9) inset,  0px 0px 0px rgba(0,0,0,0.1);
+}
+
+
+
+
+/**************  目录 *****************/
+#TOC {margin-top: 50px;width:25%; height: 93%;float: left;position:fixed;overflow:scroll;white-space: nowrap;}
+#TOC ul {padding-top: 20px;}
+#TOC ul li {margin-left:-15px;background-image: url(../images/cont_list1.png);background-size:180px;background-repeat:no-repeat;}
+#TOC ul li a {height: 10px;overflow: hidden; color:black;}
+#TOC ul li {padding-top: 12px;font-size:22px; text-indent:43px;list-style-type: none; font-family:"SimHei";font-weight:bold; }
+#TOC ul li ul {margin-top: -15px;margin-bottom: 15px;}
+#TOC ul li ul li {margin-top: -2px;font-size:20px;text-indent:0px;margin-left: 4px; list-style-type: none; font-family:"SimHei";font-weight:normal;background: white;}
+#TOC ul li ul li ul {margin-bottom: -8px;}
+#TOC ul li ul li ul li {font-size:17px;margin-left: -15px;  list-style-type: none;background: white;font-weight:normal;}
+
+
+
+
+
+/**************  主体 *****************/
+.main_page {width:70%;padding:50px 8% 0 8%; float: right; font-size: 15px; }  
+
+
+
+
+
+
+
+/**********fig&tb Auto_id *******************/		
+
+		body {counter-reset:counter1;}
+		h1 {counter-reset:counter2 counter_tb counter_fig;}
+		h2 {counter-reset:counter3;}
+		
+		h1:before
+		{
+		counter-increment:counter1;
+		content:"";
+		}
+		h2:before 
+		{
+		counter-increment:counter2;
+		content:"";
+		}
+		h3:before 
+		{
+		counter-increment:counter3;
+		content:"";
+		}
+		.name_tb:before
+		{
+		counter-increment:counter_tb;
+		content:"表" counter(counter1) "." counter(counter2) "." counter(counter_tb) " ";
+		}
+		.name_fig:before
+		{
+		counter-increment:counter_fig;
+		content:"图" counter(counter1) "." counter(counter2) "." counter(counter_fig) " ";
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********** 图标 *******************/
+
+
+	p.center {text-align: center}
+	p.name_fig {text-align: center; line-height: 1.5; font-size: 1em; margin-left:2em; margin-right:2em}
+	p.name_tb {text-align: center; line-height: 1.5; font-size: 1em; margin-left:2em; margin-right:2em}
+
+
+
+/****************   章节header    **********************/
+.head {text-align: right; margin-left:-50px;}
+.head img {height:50px}
+.head p {color: grey; font-family: ·½ÕýÒ¦Ìå; font-size:18px}
+
+
+
+
+
+
+
+
+
+
+
+
+/****************  合同表格   **************************/
+.contract_tb {
+	font-size:20px;
+	color:green;
+	height:250px;
+}
+
+.contract_tb2 th{
+	color:green;font-weight:bold;font-family:"SimHei";font-size: 16px;
+}
+
+.contract_tb2 td{
+	padding: 100px 0;
+	margin: 100px 0;
+}
+
+
+
+/*******************表格**************************************************/
+
+div.wide_tb {
+	text-align: center;
+	overflow: scroll;
+}
+
+div.wide_tb table th {
+	text-align: left;
+	padding: 3px 10px;
+	margin: 3px 10px;
+	color:green;
+	min-width: 100px;	
+}
+div.wide_tb table td {
+	text-align: left;
+	padding: 3px 10px;
+	margin: 3px 10px;	
+}
+
+div.big_tb {
+	text-align: center;
+	overflow: scroll;
+}
+div.big_tb table th {
+	text-align: left;
+	padding: 3px 10px;
+	margin: 3px 10px;
+	color:green;
+	min-width: 100px;
+	
+}
+div.big_tb table td {
+	text-align: left;
+	padding: 3px 10px;
+	margin: 3px 10px;
+	white-space:nowrap;	 /*强制不换行*/
+}
+
+div.long_div {
+	height: 800px;
+	overflow: scroll;
+}
+
+div .narrow_tb {
+	text-align: center;
+}
+div .narrow_tb table {
+	text-align: center;
+}
+div .narrow_tb th {
+	text-align: center;
+	width: 100px;
+	padding: 2px 0;
+	color:green;
+}
+div .narrow_tb td {
+	text-align: center;
+	padding: 2px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+/***********************单图**************************************/
+
+.figure {
+	text-align: center;
+	max-width:60%;
+}
+
+div .wide_fig .figure{
+	max-width:100%;
+}
+
+
+
+
+
+
+
+/************************多图框********************************/
+p.center {text-align: center}
+.albumSlider {width:600px; margin:0 auto; border:2px solid #CCC; padding-right:10px; font-size:10px;
+	position:relative;overflow:hidden;}
+.albumSlider_border {width:600px; margin:0 auto; border:2px solid #CCC; padding-right:10px; font-size:10px;
+	position:relative;overflow:hidden;}
+.albumSlider_wider{width:710px;}
+.albumSlider .fullview{position:relative; float:left;}
+.albumSlider .fullview,
+.albumSlider .fullview img {width:480px; height:480px;}
+	.albumSlider .fullview img {position:absolute; top:0; left:0;}
+.albumSlider .fullview_lower,
+	.albumSlider .fullview_lower img { height:225px;}
+.albumSlider .fullview_lower2,
+	.albumSlider .fullview_lower2 img { height:240px;}
+.albumSlider_wider .fullview img {width:600px;}
+.albumSlider .slider{width:110px;height:490px;background:#fff;
+	position:absolute;right:3px; margin-top:-3px; border-left:2px solid #CCC;}
+		.albumSlider .imglistwrap{height:448px; overflow:hidden;margin-right:5px; position:relative;}
+	.albumSlider .imglist{position:relative;}
+	.albumSlider ul{list-style-type: none; padding-left:0}
+	.albumSlider li{height:96px;margin-top:0;clear:both; list-style:none;}
+	.albumSlider li img{width:90px;height:90px; float:right; display:inline;
+		margin:2px 2px 0 0;border:1px solid #EAF2D3;}
+	.albumSlider a{width:103px;height:96px;display:block; outline:none;}
+	.albumSlider li a:hover,
+	.albumSlider li.current a{background:url(../images/album-slider-arrow_box.png) no-repeat 0 0;}
+
+.albumSlider .button {width: 100px; height:16px;cursor:pointer;margin-left:5px;
+	background:url(../images/album-slider-button.png) no-repeat 50% 100%;}
+		.albumSlider .movebackward{background-position: 50% 0;}
